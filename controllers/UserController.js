@@ -18,6 +18,11 @@ const getUsers = async (req, res) => {
     const search = req.query.q || ''
     const take = req.query.take || 10
     const skip = req.query.skip || 0
+
+    //total all users
+    const total = await prisma.user.count({
+    })
+
     // Ambil data user dari database
     const users = await prisma.user.findMany({
         select: {
@@ -46,6 +51,7 @@ const getUsers = async (req, res) => {
     res.status(200).send({
         success: true,
         message: "Get all users successfully",
+        total_items: total,
         data: users,
     });
 

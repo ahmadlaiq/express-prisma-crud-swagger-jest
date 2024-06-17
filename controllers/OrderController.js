@@ -12,6 +12,11 @@ const getOrders = async (req, res) => {
     const search = req.query.q || '';
     const take = parseInt(req.query.take) || 10;
     const skip = parseInt(req.query.skip) || 0;
+
+    //total all orders
+    const total = await prisma.order.count({
+    })
+
     // Ambil data order dari database
     const orders = await prisma.order.findMany({
         select: {
@@ -51,6 +56,7 @@ const getOrders = async (req, res) => {
     res.status(200).send({
         success: true,
         message: "Get all orders successfully",
+        total_items: total,
         data: orders,
     });
 };
