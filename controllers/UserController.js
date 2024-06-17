@@ -44,6 +44,9 @@ const getUsers = async (req, res) => {
                 }
             ]
         },
+        orderBy: {
+            created_at: 'desc'
+        },
         take: Number(take),
         skip: Number(skip),
     })

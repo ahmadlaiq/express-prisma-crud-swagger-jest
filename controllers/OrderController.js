@@ -14,8 +14,7 @@ const getOrders = async (req, res) => {
     const skip = parseInt(req.query.skip) || 0;
 
     //total all orders
-    const total = await prisma.order.count({
-    })
+    const total = await prisma.order.count({})
 
     // Ambil data order dari database
     const orders = await prisma.order.findMany({
@@ -48,6 +47,9 @@ const getOrders = async (req, res) => {
                     }
                 }
             ]
+        },
+        orderBy: {
+            created_at: 'desc'
         },
         take: take,
         skip: skip,
