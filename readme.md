@@ -3,12 +3,12 @@
 ## Instalasi dan Start Server
 Clone repository:
 ```
-git clone https://github.com/ahmadlaiq/technical-test.git
+git clone https://github.com/ahmadlaiq/express-prisma-crud-swagger-jest.git
 ```
 
 Pindah ke direktori project:
 ```
-cd technical-test
+cd express-prisma-crud-swagger-jest
 ```
 
 Install dependencies:
@@ -28,3 +28,9 @@ Di sana Anda dapat menemukan informasi tentang semua endpoint yang tersedia, ter
 Catatan:
 Pastikan Anda telah menginstal dan menjalankan server sebelum mengakses dokumentasi API.
 Anda dapat menggunakan alat seperti Postman atau curl untuk menguji endpoint API.
+
+## Testing
+Untuk melakukan testing, jalankan perintah berikut di terminal:
+```
+npm test
+```
