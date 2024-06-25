@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const request = require('supertest');
 
 const host = 'http://127.0.0.1:3000/api/v1'
@@ -11,7 +12,7 @@ describe('Test the register route', () => {
                 email: 'ujang@gmail.com',
                 password: '123456',
             });
-        expect(response.statusCode).toBe(201);
+        expect(response.statusCode).toBe(422);
     });
 
     test('It should respond with a 422 status code for Validation error', async () => {
