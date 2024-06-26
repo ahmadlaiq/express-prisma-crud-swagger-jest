@@ -1,4 +1,13 @@
-# Technical Test Mustika API
+# Express CRUD Starter
+
+## Fitur
+1. CRUD API
+2. Autentikasi JWT
+3. Dokumentasi API Swagger
+4. Unit Testing dengan Jest
+5. Prisma ORM
+6. Linting dengan ESLint dan Prettier
+7. Validasi dengan Express Validator
 
 ## Instalasi dan Start Server
 
@@ -41,4 +50,18 @@ Untuk melakukan testing, jalankan perintah berikut di terminal:
 
 ```
 npm test
+```
+
+## Linting
+Untuk menjalankan linting, jalankan perintah berikut di terminal:
+
+```
+npm run lint
+```
+
+## Formating Code
+Untuk menjalankan formating, jalankan perintah berikut di terminal:
+
+```
+npm run format
 ```
